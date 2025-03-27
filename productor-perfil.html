@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil de Productor - CaféConnect</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="productor-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header y Navegación -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Captura%20desde%202025-03-27%2005-13-48-e2hTCeME7SE3XoLxy1UpQxqNRgWNa7.png" alt="Logo" class="logo-img">
+                <h1>CaféConnect</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="productor-inicio.html">Inicio</a></li>
+                    <li class="active"><a href="productor-perfil.html">Mi Perfil</a></li>
+                    <li><a href="productor-lotes.html">Mis Lotes</a></li>
+                    <li><a href="productor-comerciantes.html">Comerciantes</a></li>
+                    <li><a href="productor-mensajes.html">Mensajes</a></li>
+                    <li><a href="productor-verificacion.html">Verificación</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn btn-secondary">Iniciar Sesión</button>
+                <button class="btn btn-primary">Registrarse</button>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Perfil y Gestión -->
+    <section id="perfil" class="profile-section page-section">
+        <div class="container">
+            <h2 class="section-title">Gestiona tu Perfil de Productor</h2>
+            <div class="profile-container">
+                <div class="profile-sidebar">
+                    <div class="profile-avatar">
+                        <img src="https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Perfil de productor">
+                        <button class="edit-avatar-btn"><i class="fas fa-camera"></i></button>
+                    </div>
+                    <h3 class="profile-name">Finca El Paraíso</h3>
+                    <p class="profile-type">Productor Verificado</p>
+                    <ul class="profile-menu">
+                        <li class="active"><a href="#info-general"><i class="fas fa-user"></i> Información General</a></li>
+                        <li><a href="#finca"><i class="fas fa-mountain"></i> Datos de la Finca</a></li>
+                        <li><a href="#produccion"><i class="fas fa-seedling"></i> Producción</a></li>
+                        <li><a href="#certificaciones"><i class="fas fa-certificate"></i> Certificaciones</a></li>
+                        <li><a href="#fotos"><i class="fas fa-images"></i> Fotos y Media</a></li>
+                        <li><a href="#historial"><i class="fas fa-history"></i> Historial de Ventas</a></li>
+                    </ul>
+                </div>
+                <div class="profile-content">
+                    <div id="info-general" class="profile-tab active">
+                        <h3>Información General</h3>
+                        <form class="profile-form">
+                            <div class="form-group">
+                                <label for="farm-name">Nombre de la Finca/Cooperativa</label>
+                                <input type="text" id="farm-name" value="Finca El Paraíso">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="producer-type">Tipo de Productor</label>
+                                    <select id="producer-type">
+                                        <option value="individual" selected>Productor Individual</option>
+                                        <option value="cooperative">Cooperativa</option>
+                                        <option value="association">Asociación</option>
+                                        <option value="company">Empresa</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="years">Años de Experiencia</label>
+                                    <input type="number" id="years" value="15">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Descripción</label>
+                                <textarea id="description" rows="4">Finca familiar con más de 15 años de experiencia en la producción de café de especialidad. Nos especializamos en variedades de Arábica cultivadas en altura con métodos sostenibles y respetuosos con el medio ambiente.</textarea>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">Ciudad/Municipio</label>
+                                    <input type="text" id="city" value="San Cristóbal de las Casas">
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">Estado</label>
+                                    <input type="text" id="state" value="Chiapas">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="website">Sitio Web</label>
+                                <input type="url" id="website" value="https://www.fincaelparaiso.mx">
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="finca" class="profile-tab">
+                        <h3>Datos de la Finca</h3>
+                        <form class="profile-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="altitude">Altitud (msnm)</label>
+                                    <input type="number" id="altitude" value="1500">
+                                </div>
+                                <div class="form-group">
+                                    <label for="area">Área Total (hectáreas)</label>
+                                    <input type="number" id="area" value="25">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="coffee-area">Área de Café (hectáreas)</label>
+                                    <input type="number" id="coffee-area" value="18">
+                                </div>
+                                <div class="form-group">
+                                    <label for="soil-type">Tipo de Suelo</label>
+                                    <select id="soil-type">
+                                        <option value="volcanic" selected>Volcánico</option>
+                                        <option value="clay">Arcilloso</option>
+                                        <option value="sandy">Arenoso</option>
+                                        <option value="loam">Franco</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="microclimate">Microclima</label>
+                                <textarea id="microclimate" rows="3">Clima templado con lluvias abundantes durante 8 meses del año. Temperatura promedio de 18-22°C con variaciones significativas entre día y noche, ideal para el desarrollo lento del grano.</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Fuentes de Agua</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked> Río/Arroyo
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked> Manantial
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox"> Pozo
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox"> Sistema de Captación de Lluvia
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="infrastructure">Infraestructura</label>
+                                <textarea id="infrastructure" rows="3">Beneficio húmedo propio, área de secado en patios y camas africanas, bodega de almacenamiento con control de humedad, laboratorio básico de catación.</textarea>
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="produccion" class="profile-tab">
+                        <h3>Producción</h3>
+                        <form class="profile-form">
+                            <div class="form-group">
+                                <label>Variedades Cultivadas</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked> Typica
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked> Bourbon
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked> Caturra
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox"> Catuaí
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox"> Geisha
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox"> Pacamara
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="annual-production">Producción Anual (kg)</label>
+                                    <input type="number" id="annual-production" value="35000">
+                                </div>
+                                <div class="form-group">
+                                    <label for="harvest-season">Temporada de Cosecha</label>
+                                    <select id="harvest-season">
+                                        <option value="nov-feb" selected>Noviembre - Febrero</option>
+                                        <option value="dec-mar">Diciembre - Marzo</option>
+                                        <option value="jan-apr">Enero - Abril</option>
+                                        <option value="feb-may">Febrero - Mayo</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Métodos de Procesamiento</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked> Lavado
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked> Natural
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked> Honey
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox"> Fermentación Anaeróbica
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="farming-practices">Prácticas Agrícolas</label>
+                                <textarea id="farming-practices" rows="3">Cultivo bajo sombra con árboles nativos. Uso de composta orgánica y control biológico de plagas. Renovación periódica de cafetales con variedades resistentes a la roya.</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="cupping-notes">Notas de Catación Típicas</label>
+                                <textarea id="cupping-notes" rows="3">Notas cítricas, caramelo, chocolate con cuerpo medio-alto y acidez brillante. Nuestro café Bourbon presenta notas a frutas rojas y caramelo con un final prolongado.</textarea>
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Captura%20desde%202025-03-27%2005-13-48-e2hTCeME7SE3XoLxy1UpQxqNRgWNa7.png" alt="Logo" class="logo-img">
+                    <h2>CaféConnect</h  alt="Logo" class="logo-img">
+                    <h2>CaféConnect</h2>
+                    <p>Conectando productores con los mejores comerciantes de café.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Plataforma</h3>
+                        <ul>
+                            <li><a href="productor-inicio.html">Inicio</a></li>
+                            <li><a href="productor-perfil.html">Mi Perfil</a></li>
+                            <li><a href="productor-lotes.html">Mis Lotes</a></li>
+                            <li><a href="productor-comerciantes.html">Comerciantes</a></li>
+                            <li><a href="productor-mensajes.html">Mensajes</a></li>
+                            <li><a href="productor-verificacion.html">Verificación</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Recursos</h3>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Guías</a></li>
+                            <li><a href="#">Eventos</a></li>
+                            <li><a href="#">Webinars</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Empresa</h3>
+                        <ul>
+                            <li><a href="#">Sobre Nosotros</a></li>
+                            <li><a href="#">Equipo</a></li>
+                            <li><a href="#">Carreras</a></li>
+                            <li><a href="#">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Términos de Servicio</a></li>
+                            <li><a href="#">Política de Privacidad</a></li>
+                            <li><a href="#">Política de Cookies</a></li>
+                            <li><a href="#">Aviso Legal</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CaféConnect. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="productor-script.js"></script>
+</body>
+</html>

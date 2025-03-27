@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Proveedores - CaféConnect</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header y Navegación -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Captura%20desde%202025-03-27%2005-13-48-e2hTCeME7SE3XoLxy1UpQxqNRgWNa7.png" alt="Logo" class="logo-img">
+                <h1>CaféConnect</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="active"><a href="buscar.html">Buscar Proveedores</a></li>
+                    <li><a href="perfil.html">Mi Perfil</a></li>
+                    <li><a href="mensajes.html">Mensajes</a></li>
+                    <li><a href="verificacion.html">Verificación</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn btn-secondary">Iniciar Sesión</button>
+                <button class="btn btn-primary">Registrarse</button>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Búsqueda de Proveedores -->
+    <section id="buscar" class="search-section page-section">
+        <div class="container">
+            <h2 class="section-title">Encuentra tu Proveedor Ideal</h2>
+            <div class="search-container">
+                <div class="search-filters">
+                    <div class="filter-group">
+                        <label for="coffee-type">Tipo de Café</label>
+                        <select id="coffee-type" class="filter-select">
+                            <option value="">Todos los tipos</option>
+                            <option value="arabica">Arábica</option>
+                            <option value="robusta">Robusta</option>
+                            <option value="liberica">Libérica</option>
+                            <option value="excelsa">Excelsa</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="quality">Calidad</label>
+                        <select id="quality" class="filter-select">
+                            <option value="">Todas las calidades</option>
+                            <option value="premium">Premium</option>
+                            <option value="specialty">Especialidad</option>
+                            <option value="commercial">Comercial</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="volume">Volumen (kg)</label>
+                        <input type="range" id="volume" min="10" max="1000" step="10" value="100">
+                        <span id="volume-value">100 kg</span>
+                    </div>
+                    <div class="filter-group">
+                        <label for="region">Región</label>
+                        <select id="region" class="filter-select">
+                            <option value="">Todas las regiones</option>
+                            <option value="chiapas">Chiapas</option>
+                            <option value="veracruz">Veracruz</option>
+                            <option value="oaxaca">Oaxaca</option>
+                            <option value="puebla">Puebla</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="certification">Certificación</label>
+                        <select id="certification" class="filter-select">
+                            <option value="">Todas las certificaciones</option>
+                            <option value="organic">Orgánico</option>
+                            <option value="fairtrade">Comercio Justo</option>
+                            <option value="rainforest">Rainforest Alliance</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary search-btn">Buscar Proveedores</button>
+                </div>
+                <div class="search-results">
+                    <div class="provider-card">
+                        <div class="provider-image">
+                            <img src="https://images.unsplash.com/photo-1591287083773-9a52e5e93fe9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Proveedor de café">
+                        </div>
+                        <div class="provider-info">
+                            <div class="provider-header">
+                                <h3>Cooperativa El Triunfo</h3>
+                                <span class="verification-badge">Verificado</span>
+                            </div>
+                            <p class="provider-location"><i class="fas fa-map-marker-alt"></i> Chiapas, México</p>
+                            <div class="provider-details">
+                                <span><i class="fas fa-coffee"></i> Arábica</span>
+                                <span><i class="fas fa-award"></i> Premium</span>
+                                <span><i class="fas fa-leaf"></i> Orgánico</span>
+                            </div>
+                            <p class="provider-description">Cooperativa con más de 20 años de experiencia en la producción de café de altura. Especialistas en variedades arábicas de alta calidad.</p>
+                            <div class="provider-actions">
+                                <button class="btn btn-primary">Contactar</button>
+                                <button class="btn btn-outline">Ver Perfil</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="provider-card">
+                        <div class="provider-image">
+                            <img src="https://images.unsplash.com/photo-1599639668273-c57372e7a82f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Proveedor de café">
+                        </div>
+                        <div class="provider-info">
+                            <div class="provider-header">
+                                <h3>Finca Los Altos</h3>
+                                <span class="verification-badge">Verificado</span>
+                            </div>
+                            <p class="provider-location"><i class="fas fa-map-marker-alt"></i> Veracruz, México</p>
+                            <div class="provider-details">
+                                <span><i class="fas fa-coffee"></i> Robusta</span>
+                                <span><i class="fas fa-award"></i> Comercial</span>
+                                <span><i class="fas fa-handshake"></i> Comercio Justo</span>
+                            </div>
+                            <p class="provider-description">Finca familiar con producción sostenible y compromiso con el comercio justo. Especialistas en café robusta de alta productividad.</p>
+                            <div class="provider-actions">
+                                <button class="btn btn-primary">Contactar</button>
+                                <button class="btn btn-outline">Ver Perfil</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="provider-card">
+                        <div class="provider-image">
+                            <img src="https://images.unsplash.com/photo-1611174797136-5d9f8d2b1f62?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Proveedor de café">
+                        </div>
+                        <div class="provider-info">
+                            <div class="provider-header">
+                                <h3>Productores Unidos</h3>
+                                <span class="verification-badge">Verificado</span>
+                            </div>
+                            <p class="provider-location"><i class="fas fa-map-marker-alt"></i> Oaxaca, México</p>
+                            <div class="provider-details">
+                                <span><i class="fas fa-coffee"></i> Arábica, Excelsa</span>
+                                <span><i class="fas fa-award"></i> Especialidad</span>
+                                <span><i class="fas fa-certificate"></i> Rainforest Alliance</span>
+                            </div>
+                            <p class="provider-description">Asociación de pequeños productores comprometidos con la calidad y la sostenibilidad ambiental. Café de especialidad con notas únicas.</p>
+                            <div class="provider-actions">
+                                <button class="btn btn-primary">Contactar</button>
+                                <button class="btn btn-outline">Ver Perfil</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Captura%20desde%202025-03-27%2005-13-48-e2hTCeME7SE3XoLxy1UpQxqNRgWNa7.png" alt="Logo" class="logo-img">
+                    <h2>CaféConnect</h2>
+                    <p>Conectando comerciantes con los mejores productores de café.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Plataforma</h3>
+                        <ul>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="buscar.html">Buscar Proveedores</a></li>
+                            <li><a href="perfil.html">Mi Perfil</a></li>
+                            <li><a href="mensajes.html">Mensajes</a></li>
+                            <li><a href="verificacion.html">Verificación</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Recursos</h3>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Guías</a></li>
+                            <li><a href="#">Eventos</a></li>
+                            <li><a href="#">Webinars</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Empresa</h3>
+                        <ul>
+                            <li><a href="#">Sobre Nosotros</a></li>
+                            <li><a href="#">Equipo</a></li>
+                            <li><a href="#">Carreras</a></li>
+                            <li><a href="#">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Términos de Servicio</a></li>
+                            <li><a href="#">Política de Privacidad</a></li>
+                            <li><a href="#">Política de Cookies</a></li>
+                            <li><a href="#">Aviso Legal</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CaféConnect. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación - CaféConnect</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="productor-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header y Navegación -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Captura%20desde%202025-03-27%2005-13-48-e2hTCeME7SE3XoLxy1UpQxqNRgWNa7.png" alt="Logo" class="logo-img">
+                <h1>CaféConnect</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="productor-inicio.html">Inicio</a></li>
+                    <li><a href="productor-perfil.html">Mi Perfil</a></li>
+                    <li><a href="productor-lotes.html">Mis Lotes</a></li>
+                    <li><a href="productor-comerciantes.html">Comerciantes</a></li>
+                    <li><a href="productor-mensajes.html">Mensajes</a></li>
+                    <li class="active"><a href="productor-verificacion.html">Verificación</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn btn-secondary">Iniciar Sesión</button>
+                <button class="btn btn-primary">Registrarse</button>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Proceso de Verificación -->
+    <section id="verificacion" class="verification-section page-section">
+        <div class="container">
+            <h2 class="section-title">Verificación de Productor</h2>
+            <div class="verification-container">
+                <div class="verification-steps">
+                    <div class="step completed">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Registro Básico</h3>
+                            <p>Crear cuenta y completar información básica de la finca o cooperativa.</p>
+                        </div>
+                        <div class="step-status">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Completado</span>
+                        </div>
+                    </div>
+                    <div class="step completed">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Información de Producción</h3>
+                            <p>Detallar variedades, procesos, volúmenes y prácticas agrícolas.</p>
+                        </div>
+                        <div class="step-status">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Completado</span>
+                        </div>
+                    </div>
+                    <div class="step active">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Certificaciones y Documentos</h3>
+                            <p>Subir certificaciones, análisis de calidad y documentos legales.</p>
+                        </div>
+                        <div class="step-status">
+                            <i class="fas fa-clock"></i>
+                            <span>En Proceso</span>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Verificación de Calidad</h3>
+                            <p>Envío de muestras para análisis y verificación de calidad.</p>
+                        </div>
+                        <div class="step-status">
+                            <i class="fas fa-hourglass-half"></i>
+                            <span>Pendiente</span>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Perfil Verificado</h3>
+                            <p>Tu perfil será marcado como verificado y tendrás acceso completo.</p>
+                        </div>
+                        <div class="step-status">
+                            <i class="fas fa-lock-open"></i>
+                            <span>Pendiente</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="verification-content">
+                    <div class="verification-card">
+                        <h3>Certificaciones y Documentos</h3>
+                        <p>Para completar este paso, necesitamos verificar las certificaciones y documentos legales de tu finca o cooperativa.</p>
+                        <div class="verification-options">
+                            <div class="option-card">
+                                <div class="option-icon">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <h4>Certificaciones</h4>
+                                <p>Sube tus certificaciones (Orgánico, Comercio Justo, Rainforest Alliance, etc.)</p>
+                                <button class="btn btn-outline">Subir Certificaciones</button>
+                            </div>
+                            <div class="option-card">
+                                <div class="option-icon">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <h4>Documentos Legales</h4>
+                                <p>Sube documentos que acrediten la propiedad o derecho de uso de la tierra.</p>
+                                <button class="btn btn-outline">Subir Documentos</button>
+                            </div>
+                        </div>
+                        <div class="verification-options">
+                            <div class="option-card">
+                                <div class="option-icon">
+                                    <i class="fas fa-coffee"></i>
+                                </div>
+                                <h4>Análisis de Calidad</h4>
+                                <p>Sube informes de catación o análisis de calidad de tu café.</p>
+                                <button class="btn btn-outline">Subir Análisis</button>
+                            </div>
+                            <div class="option-card">
+                                <div class="option-icon">
+                                    <i class="fas fa-images"></i>
+                                </div>
+                                <h4>Fotos de la Finca</h4>
+                                <p>Sube fotos que muestren tu finca, beneficio y proceso de producción.</p>
+                                <button class="btn btn-outline">Subir Fotos</button>
+                            </div>
+                        </div>
+                        <div class="verification-actions">
+                            <button class="btn btn-primary">Continuar con la Verificación</button>
+                            <button class="btn btn-text">Guardar y Continuar Después</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Captura%20desde%202025-03-27%2005-13-48-e2hTCeME7SE3XoLxy1UpQxqNRgWNa7.png" alt="Logo" class="logo-img">
+                    <h2>CaféConnect</h2>
+                    <p>Conectando productores con los mejores comerciantes de café.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Plataforma</h3>
+                        <ul>
+                            <li><a href="productor-inicio.html">Inicio</a></li>
+                            <li><a href="productor-perfil.html">Mi Perfil</a></li>
+                            <li><a href="productor-lotes.html">Mis Lotes</a></li>
+                            <li><a href="productor-comerciantes.html">Comerciantes</a></li>
+                            <li><a href="productor-mensajes.html">Mensajes</a></li>
+                            <li><a href="productor-verificacion.html">Verificación</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Recursos</h3>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Guías</a></li>
+                            <li><a href="#">Eventos</a></li>
+                            <li><a href="#">Webinars</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Empresa</h3>
+                        <ul>
+                            <li><a href="#">Sobre Nosotros</a></li>
+                            <li><a href="#">Equipo</a></li>
+                            <li><a href="#">Carreras</a></li>
+                            <li><a href="#">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Términos de Servicio</a></li>
+                            <li><a href="#">Política de Privacidad</a></li>
+                            <li><a href="#">Política de Cookies</a></li>
+                            <li><a href="#">Aviso Legal</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CaféConnect. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="productor-script.js"></script>
+</body>
+</html>

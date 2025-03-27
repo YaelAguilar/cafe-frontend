@@ -1,0 +1,517 @@
+/* Sección de estadísticas */
+.stats-section {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 5rem 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.stat-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+}
+
+/* Cómo funciona */
+.how-it-works {
+    padding: 5rem 0;
+    background-color: var(--white);
+}
+
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.step-item {
+    text-align: center;
+    position: relative;
+    padding: 2rem;
+    background-color: var(--gray-lighter);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.step-item:hover {
+    transform: translateY(-10px);
+}
+
+.step-number {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.step-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.step-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--gray-dark);
+}
+
+.step-item p {
+    color: var(--gray);
+}
+
+/* Gestión de Lotes */
+.lots-section {
+    padding: 5rem 0;
+    background-color: var(--gray-lighter);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.lots-tabs {
+    display: flex;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.lot-tab {
+    padding: 1rem 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--gray);
+    position: relative;
+}
+
+.lot-tab.active {
+    color: var(--primary);
+}
+
+.lot-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary);
+}
+
+.lots-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.lot-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px var(--shadow);
+    overflow: hidden;
+}
+
+.lot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.lot-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.lot-title h3 {
+    font-size: 1.5rem;
+    color: var(--gray-dark);
+}
+
+.lot-badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.lot-badge.available {
+    background-color: #4CAF50;
+    color: var(--white);
+}
+
+.lot-badge.reserved {
+    background-color: #FFC107;
+    color: var(--gray-dark);
+}
+
+.lot-badge.sold {
+    background-color: var(--accent);
+    color: var(--white);
+}
+
+.lot-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.lot-details {
+    padding: 1.5rem;
+}
+
+.lot-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.lot-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.info-label {
+    font-size: 0.9rem;
+    color: var(--gray);
+    font-weight: 600;
+}
+
+.info-value {
+    font-size: 1rem;
+    color: var(--gray-dark);
+}
+
+.lot-description {
+    margin-bottom: 1.5rem;
+    color: var(--gray);
+}
+
+.lot-stats {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.lot-stat {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.lot-footer {
+    padding: 1.5rem;
+    border-top: 1px solid var(--gray-light);
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+/* Búsqueda de Comerciantes */
+.merchants-section {
+    padding: 5rem 0;
+    background-color: var(--white);
+}
+
+.merchants-tabs {
+    display: flex;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.merchant-tab {
+    padding: 1rem 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--gray);
+    position: relative;
+}
+
+.merchant-tab.active {
+    color: var(--primary);
+}
+
+.merchant-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary);
+}
+
+.merchants-filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    background-color: var(--gray-lighter);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    grid-column: 1 / -1;
+    justify-self: end;
+}
+
+.merchants-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.merchant-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px var(--shadow);
+    overflow: hidden;
+}
+
+.merchant-header {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.merchant-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 1rem;
+}
+
+.merchant-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.merchant-title {
+    flex: 1;
+}
+
+.merchant-title h3 {
+    font-size: 1.5rem;
+    color: var(--gray-dark);
+    margin-bottom: 0.5rem;
+}
+
+.merchant-badges {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.merchant-badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.merchant-badge.verified {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.merchant-badge.match {
+    background-color: #4CAF50;
+    color: var(--white);
+}
+
+.merchant-details {
+    padding: 1.5rem;
+}
+
+.merchant-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.merchant-info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--gray);
+}
+
+.merchant-description {
+    margin-bottom: 1.5rem;
+    color: var(--gray);
+}
+
+.merchant-interests {
+    margin-bottom: 1rem;
+}
+
+.merchant-interests h4 {
+    font-size: 1rem;
+    color: var(--gray-dark);
+    margin-bottom: 0.8rem;
+}
+
+.interest-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.interest-tag {
+    background-color: var(--gray-lighter);
+    color: var(--gray-dark);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.merchant-footer {
+    padding: 1.5rem;
+    border-top: 1px solid var(--gray-light);
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+/* Paginación */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.pagination-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    border: 1px solid var(--gray-light);
+    color: var(--gray);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination-btn:hover {
+    background-color: var(--gray-lighter);
+}
+
+.pagination-btn.active {
+    background-color: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+/* Responsive para vistas de productores */
+@media (max-width: 768px) {
+    .step-item {
+        padding: 1.5rem;
+    }
+    
+    .lot-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .merchant-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .merchant-avatar {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .merchant-badges {
+        justify-content: center;
+    }
+    
+    .merchant-footer, .lot-footer {
+        flex-direction: column;
+    }
+    
+    .merchant-footer button, .lot-footer button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .steps-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .lot-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .lot-stats {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .merchants-filters {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comerciantes Interesados - CaféConnect</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="productor-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header y Navegación -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Captura%20desde%202025-03-27%2005-13-48-e2hTCeME7SE3XoLxy1UpQxqNRgWNa7.png" alt="Logo" class="logo-img">
+                <h1>CaféConnect</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="productor-inicio.html">Inicio</a></li>
+                    <li><a href="productor-perfil.html">Mi Perfil</a></li>
+                    <li><a href="productor-lotes.html">Mis Lotes</a></li>
+                    <li class="active"><a href="productor-comerciantes.html">Comerciantes</a></li>
+                    <li><a href="productor-mensajes.html">Mensajes</a></li>
+                    <li><a href="productor-verificacion.html">Verificación</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn btn-secondary">Iniciar Sesión</button>
+                <button class="btn btn-primary">Registrarse</button>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Búsqueda de Comerciantes -->
+    <section id="comerciantes" class="merchants-section page-section">
+        <div class="container">
+            <h2 class="section-title">Comerciantes Interesados</h2>
+            
+            <div class="merchants-tabs">
+                <button class="merchant-tab active" data-tab="matches">Emparejamientos (8)</button>
+                <button class="merchant-tab" data-tab="interested">Interesados en tus Lotes (5)</button>
+                <button class="merchant-tab" data-tab="all">Explorar Comerciantes</button>
+            </div>
+            
+            <div class="merchants-filters">
+                <div class="filter-group">
+                    <label for="merchant-type">Tipo de Comerciante</label>
+                    <select id="merchant-type" class="filter-select">
+                        <option value="">Todos los tipos</option>
+                        <option value="cafe">Cafeterías</option>
+                        <option value="roaster">Tostadores</option>
+                        <option value="distributor">Distribuidores</option>
+                        <option value="exporter">Exportadores</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="location">Ubicación</label>
+                    <select id="location" class="filter-select">
+                        <option value="">Todas las ubicaciones</option>
+                        <option value="mexico">México</option>
+                        <option value="usa">Estados Unidos</option>
+                        <option value="europe">Europa</option>
+                        <option value="asia">Asia</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="volume">Volumen de Compra</label>
+                    <select id="volume" class="filter-select">
+                        <option value="">Cualquier volumen</option>
+                        <option value="small">Pequeño (< 500 kg)</option>
+                        <option value="medium">Mediano (500-2000 kg)</option>
+                        <option value="large">Grande (> 2000 kg)</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="certification">Certificación Requerida</label>
+                    <select id="certification" class="filter-select">
+                        <option value="">Cualquiera</option>
+                        <option value="organic">Orgánico</option>
+                        <option value="fairtrade">Comercio Justo</option>
+                        <option value="rainforest">Rainforest Alliance</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary filter-btn">Aplicar Filtros</button>
+            </div>
+            
+            <div class="merchants-container">
+                <!-- Comerciante 1 -->
+                <div class="merchant-card">
+                    <div class="merchant-header">
+                        <div class="merchant-avatar">
+                            <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Comerciante">
+                        </div>
+                        <div class="merchant-title">
+                            <h3>Café Gourmet S.A.</h3>
+                            <div class="merchant-badges">
+                                <span class="merchant-badge verified"><i class="fas fa-check-circle"></i> Verificado</span>
+                                <span class="merchant-badge match"><i class="fas fa-handshake"></i> 95% Match</span>
+                            </div>
+                        </div>
+                        <div class="merchant-actions">
+                            <button class="btn-icon"><i class="fas fa-star"></i></button>
+                        </div>
+                    </div>
+                    <div class="merchant-details">
+                        <div class="merchant-info">
+                            <div class="merchant-info-item">
+                                <span class="info-label"><i class="fas fa-store"></i> Tipo:</span>
+                                <span class="info-value">Distribuidor</span>
+                            </div>
+                            <div class="merchant-info-item">
+                                <span class="info-label"><i class="fas fa-map-marker-alt"></i> Ubicación:</span>
+                                <span class="info-value">Ciudad de México, México</span>
+                            </div>
+                            <div class="merchant-info-item">
+                                <span class="info-label"><i class="fas fa-shopping-cart"></i> Volumen:</span>
+                                <span class="info-value">1,500-2,000 kg/mes</span>
+                            </div>
+                            <div class="merchant-info-item">
+                                <span class="info-label"><i class="fas fa-certificate"></i> Busca:</span>
+                                <span class="info-value">Orgánico, Especialidad</span>
+                            </div>
+                        </div>
+                        <div class="merchant-description">
+                            <p>Distribuidora de café gourmet para cafeterías de especialidad y restaurantes de alta cocina. Buscan café de alta calidad con trazabilidad completa y certificaciones.</p>
+                        </div>
+                        <div class="merchant-interests">
+                            <h4>Interesado en tus lotes:</h4>
+                            <div class="interest-tags">
+                                <span class="interest-tag">Bourbon Lavado Premium</span>
+                                <span class="interest-tag">Typica Honey Microlote</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="merchant-footer">
+                        <button class="btn btn-outline">Ver Perfil</button>
+                        <button class="btn btn-primary">Contactar</button>
+                    </div>
+                </div>
+                
+                <!-- Comerciante 2 -->
+                <div class="merchant-card">
+                    <div class="merchant-header">
+                        <div class="merchant-avatar">
+                            <img src="https://images.unsplash.com/photo-1577415124269-fc1140a69e91?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Comerciante">
+                        </div>
+                        <div class="merchant-title">
+                            <h3>Specialty Coffee Roasters</h3>
+                            <div class="merchant-badges">
+                                <span class="merchant-badge verified"><i class="fas fa-check-circle"></i> Verificado</span>
+                                <span class="merchant-badge match"><i class="fas fa-handshake"></i> 88% Match</span>
+                            </div>
+                        </div>
+                        <div class="merchant-actions">
+                            <button class="btn-icon"><i class="fas fa-star"></i></button>
+                        </div>
+                    </div>
+                    <div class="merchant-details">
+                        <div class="merchant-info">
+                            <div class="merchant-info-item">
+                                <span class="info-label"><i class="fas fa-store"></i> Tipo:</span>
+                                <span class="info-value">Tostador</span>
+                            </div>
+                            <div class="merchant-info-item">
+                                <span class="info-label"><i class="fas fa-map-marker-alt"></i> Ubicación:</span>
+                                <span class="info-value">Portland, Estados Unidos</span>
+                            </div>
+                            <div class="merchant-info-item">
+                                <span class="info-label"><i class="fas fa-shopping-cart"></i> Volumen:</span>
+                                <span class="info-value">500-1,000 kg/mes</span>
+                            </div>
+                            <div class="merchant-info-item">
+                                <span class="info-label"><i class="fas fa-certificate"></i> Busca:</span>
+                                <span class="info-value">Especialidad, Microlotes</span>
+                            </div>
+                        </div>
+                        <div class="merchant-description">
+                            <p>Tostador artesanal especializado en cafés de alta puntuación. Buscan establecer relaciones directas con productores para asegurar calidad y trazabilidad.</p>
+                        </div>
+                        <div class="merchant-interests">
+                            <h4>Interesado en tus lotes:</h4>
+                            <div class="interest-tags">
+                                <span class="interest-tag">Typica Honey Microlote</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="merchant-footer">
+                        <button class="btn btn-outline">Ver Perfil</button>
+                        <button class="btn btn-primary">Contactar</button>
+                    </div>
+                </div>
+                
+                <!-- Comerciante 3 -->
+                <div class="merchant-card">
+                    <div class="merchant-header">
+                        <div class="merchant-avatar">
+                            <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Comerciante">
+                        </div>
+                        <div class="merchant-title">
+                            <h3>Café Orgánico Express</h3>
+                            <div class="merchant-badges">
+                                <span class="merchant-badge verified"><i class="fas fa-check-circle"></i> Verificado</span>
+                                <span class="merchant-badge match"><i class="fas fa-handshake"></i> 92% Match</span>
+                            </div>
+                        </div>
+                        <div class="merchant-actions">
+                            <button class="btn-icon"><i class="fas fa-star"></i></button>
+                        </div>
+                    </div>
+                    <div class="merchant-details">
+                        <div class="merchant-info">
+                            <div class="merchant-info-item">
+                                <span class="info-label"><i class="fas fa-store"></i> Tipo:</span>
+                                <span class="info-value">Cafetería/Distribuidor</span>
+                            </div>
+                            <div class="merchant-info-item">
+                                <span class="info-label"><i class="fas fa-map-marker-alt"></i> Ubicación:</span>
+                                <span class="info-value">Barcelona, España</span>
+                            </div>
+                            <div class="merchant-info-item">
+                                <span class="info-label"><i class="fas fa-shopping-cart"></i> Volumen:</span>
+                                <span class="info-value">800-1,200 kg/mes</span>
+                            </div>
+                            <div class="merchant-info-item">
+                                <span class="info-label"><i class="fas fa-certificate"></i> Busca:</span>
+                                <span class="info-value">Orgánico, Comercio Justo</span>
+                            </div>
+                        </div>
+                        <div class="merchant-description">
+                            <p>Cadena de cafeterías orgánicas con distribución a otras tiendas. Comprometidos con la sostenibilidad y el comercio justo. Buscan relaciones a largo plazo con productores certificados.</p>
+                        </div>
+                        <div class="merchant-interests">
+                            <h4>Interesado en tus lotes:</h4>
+                            <div class="interest-tags">
+                                <span class="interest-tag">Caturra Natural Orgánico</span>
+                                <span class="interest-tag">Bourbon Lavado Premium</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="merchant-footer">
+                        <button class="btn btn-outline">Ver Perfil</button>
+                        <button class="btn btn-primary">Contactar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pagination">
+                <button class="pagination-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Captura%20desde%202025-03-27%2005-13-48-e2hTCeME7SE3XoLxy1UpQxqNRgWNa7.png" alt="Logo" class="logo-img">
+                    <h2>CaféConnect</h2>
+                    <p>Conectando productores con los mejores comerciantes de café.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Plataforma</h3>
+                        <ul>
+                            <li><a href="productor-inicio.html">Inicio</a></li>
+                            <li><a href="productor-perfil.html">Mi Perfil</a></li>
+                            <li><a href="productor-lotes.html">Mis Lotes</a></li>
+                            <li><a href="productor-comerciantes.html">Comerciantes</a></li>
+                            <li><a href="productor-mensajes.html">Mensajes</a></li>
+                            <li><a href="productor-verificacion.html">Verificación</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Recursos</h3>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Guías</a></li>
+                            <li><a href="#">Eventos</a></li>
+                            <li><a href="#">Webinars</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Empresa</h3>
+                        <ul>
+                            <li><a href="#">Sobre Nosotros</a></li>
+                            <li><a href="#">Equipo</a></li>
+                            <li><a href="#">Carreras</a></li>
+                            <li><a href="#">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Términos de Servicio</a></li>
+                            <li><a href="#">Política de Privacidad</a></li>
+                            <li><a href="#">Política de Cookies</a></li>
+                            <li><a href="#">Aviso Legal</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CaféConnect. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="productor-script.js"></script>
+</body>
+</html>

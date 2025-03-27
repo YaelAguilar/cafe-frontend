@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - CaféConnect</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header y Navegación -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Captura%20desde%202025-03-27%2005-13-48-e2hTCeME7SE3XoLxy1UpQxqNRgWNa7.png" alt="Logo" class="logo-img">
+                <h1>CaféConnect</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="buscar.html">Buscar Proveedores</a></li>
+                    <li class="active"><a href="perfil.html">Mi Perfil</a></li>
+                    <li><a href="mensajes.html">Mensajes</a></li>
+                    <li><a href="verificacion.html">Verificación</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn btn-secondary">Iniciar Sesión</button>
+                <button class="btn btn-primary">Registrarse</button>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Perfil y Gestión -->
+    <section id="perfil" class="profile-section page-section">
+        <div class="container">
+            <h2 class="section-title">Gestiona tu Perfil Comercial</h2>
+            <div class="profile-container">
+                <div class="profile-sidebar">
+                    <div class="profile-avatar">
+                        <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Perfil de comerciante">
+                        <button class="edit-avatar-btn"><i class="fas fa-camera"></i></button>
+                    </div>
+                    <h3 class="profile-name">Café Gourmet S.A.</h3>
+                    <p class="profile-type">Comerciante Verificado</p>
+                    <ul class="profile-menu">
+                        <li class="active"><a href="#info-general"><i class="fas fa-user"></i> Información General</a></li>
+                        <li><a href="#necesidades"><i class="fas fa-clipboard-list"></i> Necesidades de Abastecimiento</a></li>
+                        <li><a href="#criterios"><i class="fas fa-filter"></i> Criterios de Compra</a></li>
+                        <li><a href="#documentos"><i class="fas fa-file-alt"></i> Documentos</a></li>
+                        <li><a href="#historial"><i class="fas fa-history"></i> Historial de Transacciones</a></li>
+                    </ul>
+                </div>
+                <div class="profile-content">
+                    <div id="info-general" class="profile-tab active">
+                        <h3>Información General</h3>
+                        <form class="profile-form">
+                            <div class="form-group">
+                                <label for="business-name">Nombre del Negocio</label>
+                                <input type="text" id="business-name" value="Café Gourmet S.A.">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="business-type">Tipo de Negocio</label>
+                                    <select id="business-type">
+                                        <option value="cafe">Cafetería</option>
+                                        <option value="restaurant">Restaurante</option>
+                                        <option value="distributor" selected>Distribuidor</option>
+                                        <option value="roaster">Tostador</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="years">Años en el Mercado</label>
+                                    <input type="number" id="years" value="8">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Descripción del Negocio</label>
+                                <textarea id="description" rows="4">Distribuidora de café gourmet para cafeterías de especialidad y restaurantes de alta cocina. Nos especializamos en seleccionar los mejores granos para nuestros clientes exigentes.</textarea>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">Ciudad</label>
+                                    <input type="text" id="city" value="Ciudad de México">
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">Estado</label>
+                                    <input type="text" id="state" value="CDMX">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="website">Sitio Web</label>
+                                <input type="url" id="website" value="https://www.cafegourmetsa.mx">
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="necesidades" class="profile-tab">
+                        <h3>Necesidades de Abastecimiento</h3>
+                        <form class="profile-form">
+                            <div class="form-group">
+                                <label>Tipos de Café Requeridos</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked> Arábica
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked> Robusta
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox"> Libérica
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked> Excelsa
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Calidades Requeridas</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked> Premium
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked> Especialidad
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox"> Comercial
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="volume-needed">Volumen Mensual Requerido (kg)</label>
+                                <input type="number" id="volume-needed" value="500">
+                            </div>
+                            <div class="form-group">
+                                <label for="frequency">Frecuencia de Compra</label>
+                                <select id="frequency">
+                                    <option value="weekly">Semanal</option>
+                                    <option value="biweekly" selected>Quincenal</option>
+                                    <option value="monthly">Mensual</option>
+                                    <option value="quarterly">Trimestral</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="additional-needs">Requisitos Adicionales</label>
+                                <textarea id="additional-needs" rows="4">Necesitamos proveedores que puedan garantizar la trazabilidad del producto y que cuenten con certificaciones de calidad. Preferimos trabajar con cooperativas que tengan prácticas sostenibles.</textarea>
+                            </div>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Captura%20desde%202025-03-27%2005-13-48-e2hTCeME7SE3XoLxy1UpQxqNRgWNa7.png" alt="Logo" class="logo-img">
+                    <h2>CaféConnect</h2>
+                    <p>Conectando comerciantes con los mejores productores de café.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Plataforma</h3>
+                        <ul>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="buscar.html">Buscar Proveedores</a></li>
+                            <li><a href="perfil.html">Mi Perfil</a></li>
+                            <li><a href="mensajes.html">Mensajes</a></li>
+                            <li><a href="verificacion.html">Verificación</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Recursos</h3>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Guías</a></li>
+                            <li><a href="#">Eventos</a></li>
+                            <li><a href="#">Webinars</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Empresa</h3>
+                        <ul>
+                            <li><a href="#">Sobre Nosotros</a></li>
+                            <li><a href="#">Equipo</a></li>
+                            <li><a href="#">Carreras</a></li>
+                            <li><a href="#">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Términos de Servicio</a></li>
+                            <li><a href="#">Política de Privacidad</a></li>
+                            <li><a href="#">Política de Cookies</a></li>
+                            <li><a href="#">Aviso Legal</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CaféConnect. Todos los derechos reservados.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
