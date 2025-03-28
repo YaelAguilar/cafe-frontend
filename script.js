@@ -243,4 +243,166 @@ document.addEventListener('DOMContentLoaded', function() {
     if (chatMessages) {
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
+    
+    // Función para mostrar alerta personalizada y redireccionar
+    function showCustomAlert(title, message, icon, redirectUrl) {
+        // Crear elementos de la alerta
+        const overlay = document.createElement('div');
+        overlay.className = 'custom-alert-overlay';
+        
+        const alertBox = document.createElement('div');
+        alertBox.className = 'custom-alert';
+        
+        const alertIcon = document.createElement('div');
+        alertIcon.className = 'custom-alert-icon';
+        alertIcon.innerHTML = `<i class="fas fa-${icon}"></i>`;
+        
+        const alertTitle = document.createElement('h3');
+        alertTitle.className = 'custom-alert-title';
+        alertTitle.textContent = title;
+        
+        const alertMessage = document.createElement('p');
+        alertMessage.className = 'custom-alert-message';
+        alertMessage.textContent = message;
+        
+        const alertProgress = document.createElement('div');
+        alertProgress.className = 'custom-alert-progress';
+        
+        const progressBar = document.createElement('div');
+        progressBar.className = 'custom-alert-progress-bar';
+        
+        // Construir la estructura de la alerta
+        alertProgress.appendChild(progressBar);
+        alertBox.appendChild(alertIcon);
+        alertBox.appendChild(alertTitle);
+        alertBox.appendChild(alertMessage);
+        alertBox.appendChild(alertProgress);
+        overlay.appendChild(alertBox);
+        
+        // Añadir la alerta al body
+        document.body.appendChild(overlay);
+        
+        // Mostrar la alerta con animación
+        setTimeout(() => {
+            overlay.classList.add('active');
+            alertProgress.classList.add('active');
+        }, 10);
+        
+        // Configurar redirección después de 3 segundos
+        setTimeout(() => {
+            window.location.href = redirectUrl;
+        }, 3000);
+    }
+    
+    // Agregar evento a los botones de contacto en la sección de búsqueda
+    const contactProviderButtons = document.querySelectorAll('.provider-actions .btn-primary, .supplier-actions .btn-primary');
+    
+    if (contactProviderButtons.length > 0) {
+        contactProviderButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Obtener el nombre del proveedor
+                const providerCard = this.closest('.provider-card, .supplier-card');
+                const providerName = providerCard.querySelector('.provider-header h3, .supplier-header h3').textContent;
+                
+                // Mostrar alerta personalizada
+                showCustomAlert(
+                    'Contactando Proveedor',
+                    `Estableciendo comunicación con ${providerName}. Serás redirigido a la sección de mensajes en unos segundos.`,
+                    'comments',
+                    'mensajes.html'
+                );
+            });
+        });
+    }
+    
+    // También agregar evento a los botones de contacto en la sección de comerciantes para productores
+    const contactMerchantButtons = document.querySelectorAll('.merchant-footer .btn-primary');
+    
+    if (contactMerchantButtons.length > 0) {
+        contactMerchantButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Obtener el nombre del comerciante
+                const merchantCard = this.closest('.merchant-card');
+                const merchantName = merchantCard.querySelector('.merchant-title h3').textContent;
+                
+                // Mostrar alerta personalizada
+                showCustomAlert(
+                    'Contactando Comerciante',
+                    `Estableciendo comunicación con ${merchantName}. Serás redirigido a la sección de mensajes en unos segundos.`,
+                    'comments',
+                    'productor-mensajes.html'
+                );
+            });
+        });
+    }
+
+    // Funcionalidad para formularios de login y registro
+    const loginForm = document.getElementById('login-form');
+    const registerForm = document.getElementById('register-form');
+    
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            console.log('Intento de inicio de sesión:', { email, password });
+            
+            // Simulación de inicio de sesión exitoso
+            showCustomAlert(
+                'Inicio de Sesión Exitoso',
+                'Bienvenido de nuevo a CaféConnect. Redirigiendo...',
+                'check-circle',
+                'index.html' // Aquí se podría redirigir según el rol, pero por ahora va al inicio
+            );
+        });
+    }
+    
+    if (registerForm) {
+        registerForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const fullname = document.getElementById('fullname').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            const userType = document.getElementById('user-type').value;
+            const company = document.getElementById('company').value;
+            
+            // Validación básica
+            if (password !== confirmPassword) {
+                alert('Las contraseñas no coinciden');
+                return;
+            }
+            
+            console.log('Registro de usuario:', { 
+                fullname, 
+                email, 
+                userType, 
+                company 
+            });
+            
+            // Simulación de registro exitoso
+            let redirectUrl = 'index.html';
+            
+            // Redirigir según el tipo de usuario
+            if (userType === 'comerciante') {
+                redirectUrl = 'index.html'; // Vista de comerciante
+            } else if (userType === 'productor') {
+                redirectUrl = 'productor-inicio.html'; // Vista de productor
+            }
+            
+            showCustomAlert(
+                'Registro Exitoso',
+                '¡Bienvenido a CaféConnect! Tu cuenta ha sido creada correctamente. Redirigiendo...',
+                'check-circle',
+                redirectUrl
+            );
+        });
+    }
 });
